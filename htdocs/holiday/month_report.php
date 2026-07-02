@@ -502,4 +502,11 @@ git checkout -b feat/holiday-ical-export
 # apply the two diffs from my final-diff message
 git status          # should show month_report.php + en_US/holiday.lang modified
 php -l htdocs/holiday/month_report.php
+git checkout develop && git pull origin develop
+git checkout -b feat/holiday-ical-export
+git status
+git diff --stat
+php -l htdocs/holiday/month_report.php
+./vendor/bin/phpcs --standard=dev/setup/codesniffer/ruleset.xml htdocs/holiday/month_report.php
+./vendor/bin/phan --config-file .phan/config.php
 	
