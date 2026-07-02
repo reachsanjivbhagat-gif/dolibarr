@@ -509,4 +509,4 @@ git diff --stat
 php -l htdocs/holiday/month_report.php
 ./vendor/bin/phpcs --standard=dev/setup/codesniffer/ruleset.xml htdocs/holiday/month_report.php
 ./vendor/bin/phan --config-file .phan/config.php
-	
+--report=full	
